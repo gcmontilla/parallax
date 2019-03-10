@@ -1,0 +1,115 @@
+body, html {
+    height: 100%;
+    margin: 0%;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+.navbar {
+    width: 100%;
+    color: white;
+    position: fixed;
+    z-index: 1;
+}
+
+.pimg1, .pimg2, .pimg3 {
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* 
+    fixed = parallax
+    scroll = normal
+    */
+    background-attachment: fixed;
+}
+
+.pimg1 {
+    background-image: url('../img/arch-bridge-clouds-814499.jpg');
+    min-height:100%;
+}
+
+.pimg2 {
+    background-image: url('../img/background-background-image-clouds-1054289.jpg');
+    min-height:400px;
+}
+
+.pimg3 {
+    background-image: url('../img/pexels-photo-443446.jpeg');
+    min-height:400px;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.gallery {
+    padding: 25px;
+    font-size: 3em;
+    font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif; 
+}
+
+.gallery ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.card {
+    margin: 15px;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+@media(min-width: 915px) {
+    /* Checks if window exceeds width and grants all grid class a grid display*/
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    /* Causes content to span middle 2 columns*/
+    .gallery ul {
+        grid-column: 1/5;
+    }
+
+    /* Lines up items in one row*/
+    .gallery ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .gallery li {
+        width: 100%;
+    }
+}
